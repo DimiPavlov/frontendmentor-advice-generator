@@ -1,0 +1,47 @@
+.advice-container {
+  width: 500px;
+  display: flex;
+  background-color: var(--dark-gray-blue);
+  color: var(--gray-blue);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 50px;
+  position: relative;
+}
+
+.advice-number {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+.dice-container {
+  position: absolute;
+  bottom: -20px;
+  background-color: var(--neon-green);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+.dice-container:hover {
+  box-shadow: 0 0 26px var(--neon-green);
+}
+
+.advice,
+.patter-icon {
+  text-align: center;
+  margin: 20px 0;
+  color: var(--light-cyan);
+}
+
+.dice-icon {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+}

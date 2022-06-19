@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Axios from "axios";
+import "./App.css";
+import Advice from "./components/advice/Advice";
+
+const url = "https://api.adviceslip.com/advice";
 
 function App() {
+  const [advice, setAdvice] = useState([]);
+  const [number, setNumber] = useState("");
+
+  useEffect(() => {
+    getAdviceData();
+  }, []);
+
+  const getAdviceData = () => {
+    Axios.get(url).then((res) => {
+      const {
+        data: { slip },
+      } = res;
+      setAdvice(slip.advice);
+      setNumber(slip.id);
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Advice advice={advice} number={number} onClick={getAdviceData} />
     </div>
   );
 }
