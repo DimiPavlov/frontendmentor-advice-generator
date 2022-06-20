@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/frontendmentor-advice-generator/static/css/main.8419b705.css",
+    "main.js": "/frontendmentor-advice-generator/static/js/main.a809111d.js",
+    "index.html": "/frontendmentor-advice-generator/index.html",
+    "static/media/icon-dice.svg": "/frontendmentor-advice-generator/static/media/icon-dice.08691e4c24c11b5ba564e06b1f6bcbf3.svg",
+    "static/media/pattern-divider-desktop.svg": "/frontendmentor-advice-generator/static/media/pattern-divider-desktop.ed9685263f6b47d21c8848f7d8bdd10e.svg",
+    "main.8419b705.css.map": "/frontendmentor-advice-generator/static/css/main.8419b705.css.map",
+    "main.a809111d.js.map": "/frontendmentor-advice-generator/static/js/main.a809111d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8419b705.css",
+    "static/js/main.a809111d.js"
+  ]
+}
