@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import "./App.css";
 import Advice from "./components/advice/Advice";
 
 const url = "https://api.adviceslip.com/advice";
 
-function App() {
-  const [advice, setAdvice] = useState([]);
-  const [number, setNumber] = useState("");
+const App = () => {
+  const [advice, setAdvice] = useState<string | any>([]);
+  const [number, setNumber] = useState<number>(0);
 
   useEffect(() => {
     getAdviceData();
@@ -28,6 +27,6 @@ function App() {
       <Advice advice={advice} number={number} onClick={getAdviceData} />
     </div>
   );
-}
+};
 
 export default App;

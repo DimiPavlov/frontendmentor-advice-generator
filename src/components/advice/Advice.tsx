@@ -4,7 +4,17 @@ import "./advice.css";
 import DiceIcon from "../../images/icon-dice.svg";
 import PatterDivider from "../../images/pattern-divider-desktop.svg";
 
-const Advice = ({ advice, number, onClick }) => {
+interface AdviceProps {
+  advice: string;
+  number: number;
+  onClick: (e: React.MouseEvent<HTMLElement>) => void;
+}
+
+const Advice: React.FC<AdviceProps> = ({
+  advice,
+  number,
+  onClick,
+}): JSX.Element => {
   return (
     <div className="advice-container">
       <p className="advice-number">Advice #{number}</p>
